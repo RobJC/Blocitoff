@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
+  gem 'capybara'
 end
 
 
@@ -44,3 +45,4 @@ gem 'spring',        group: :development
 
 gem 'bootstrap-sass'
 gem 'devise'
+gem 'factory_girl_rails', '~> 4.0'
