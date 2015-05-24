@@ -2,6 +2,7 @@
 
     <div class='media-body'>
         <small>
+            This item has <%= pluralize(7 - item.days_left, 'day') %> until it is deleted.
             <%= link_to "", [item.user, item], method: :delete, class: 'glyphicon glyphicon-ok', remote: true %>
         </small>
         <p><%= item.name %></p>

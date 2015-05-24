@@ -21,7 +21,7 @@ require 'faker'
     )
     
     # set the created_at time to within the past year
-    # item.update_attributes!(created_at: rand(10.minutes .. 1.year).ago)
+    item.update_attributes!(created_at: rand(10.minutes .. 7.days).ago)
 end
 
 puts 'Seed finished'
