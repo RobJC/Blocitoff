@@ -53,6 +53,11 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'bootstrap-sass'
+# Devise for authentication
 gem 'devise'
+#Factory girl for spec
 gem 'factory_girl_rails', '~> 4.0'
+# Figaro for handling sensitive data with environment variables
 gem 'figaro', '1.0'
+# gem faker to generate development data
+gem 'faker'
