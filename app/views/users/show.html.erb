@@ -1,4 +1,11 @@
 <h1><%= @user.name %></h1>
 
 <h2>To-Do Items</h2>
-<%#= render @items %>
+<div class='js-items'>
+    <%= render partial: 'items/item', collection: @items %>
+</div>
+
+<h3>Add an item:</h3>
+<div class='new-item'>
+    <%= render partial: 'items/form', locals: {user: @user} %>
+</div>

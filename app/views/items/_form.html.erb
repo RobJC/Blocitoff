@@ -1,0 +1,20 @@
+<%= form_for [user, user.items.new], remote: true do |f| %>
+    <% if user.items.new.errors.any? %>
+        <div class='alert alert-danger'>
+            <h4>There are <%= pluralize(user.items.new.errors.count, "error") %>.</h4>
+            <ul>
+                <% user.items.new.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+    <%#= form_group_tag(user.items.new.errors[:name]) do %>
+    <div class='form-group'>    
+        <%= f.text_field :name, class: 'form-control' %>
+    </div>
+    <%# end %>
+    <div class="form-group">
+        <%= f.submit "Create Item", class: 'btn btn-primary' %>
+    </div>
+<% end %>
